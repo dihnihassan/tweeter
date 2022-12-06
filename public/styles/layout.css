@@ -19,20 +19,23 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif; 
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
 }
 
 .logo {
   font-family: "Bungee", sans-serif;
 }
 
-.container {
-width: 90%;
-display: flex;
-align-items: center;
-background-color: #f4f1ec;
+main {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  background-color: #f4f1ec;
+  /* border: 2px solid red; */
 }
 
 /*
