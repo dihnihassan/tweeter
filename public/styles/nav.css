@@ -8,8 +8,15 @@ justify-content:space-between;
 align-items: center;
 padding-left: 1.5em;
 padding-right: 1.5em;
-
+position: fixed;
 }
+
+/* div.fix {
+  position: fixed;
+  top: 0;
+  width: 100%;
+} */
+
 .right-nav {
   display: flex;
   flex-direction: column;
