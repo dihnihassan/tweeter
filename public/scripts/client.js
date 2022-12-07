@@ -74,20 +74,33 @@ $(document).ready(function () {
     event.preventDefault();
     console.log("Hello from jQuery!");
     const dataForm = $( this ).serialize() 
-    console.log(dataForm);
+    console.log("This is dataform", dataForm);
+
+    if (dataForm.length === 5) {
+      alert('Error: Tweet Area Cannot be empty');
+    }
+    if (dataForm.length > 145) {
+      alert("Tweet Exceeds 140 Character Limit");
+    } else {
+      $.ajax({
+        type: "POST",
+        url: "/tweets/",
+        data: dataForm,
+        success: () => {
+          loadTweets();
+        }
+      });
+
+
+    }
 
     // const newTweet = document.getElementById("tweet-text");
-    $.ajax({
-      type: "POST",
-      url: "/tweets/",
-      data: dataForm,
-      success: () => {
-        loadTweets();
-      }
-    });
 
 
   });
 
 });
 
+// if tweet count too long 
+// if tweet area empty
+  // do not submit form
