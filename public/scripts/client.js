@@ -10,44 +10,45 @@ const tweetData = {
   "user": {
     "name": "Newton",
     "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
+    "handle": "@SirIsaac"
+  },
   "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
+    "text": "If I have seen further it is by standing on the shoulders of giants"
+  },
   "created_at": 1461116232227
 
-  };
+};
 
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
+const data = [
+  {
+    "user": {
+      "name": "Newton",
+      "avatars": "https://i.imgur.com/73hZDYK.png"
+      ,
+      "handle": "@SirIsaac"
     },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ]
+    "content": {
+      "text": "If I have seen further it is by standing on the shoulders of giants"
+    },
+    "created_at": 1461116232227
+  },
+  {
+    "user": {
+      "name": "Descartes",
+      "avatars": "https://i.imgur.com/nlhLi3I.png",
+      "handle": "@rd"
+    },
+    "content": {
+      "text": "Je pense , donc je suis"
+    },
+    "created_at": 1461113959088
+  }
+]
 
 
-$(document).ready(function() {
-  const createTweetElement = function(tweetData) {
-    console.log("Inside createtweetelement", tweetData);
+$(document).ready(function () {
+  const createTweetElement = function (tweetData) {
+    // console.log("Inside createtweetelement", tweetData);
 
     const $tweet = $(`
     <article class="tweet">
@@ -70,28 +71,59 @@ $(document).ready(function() {
     </footer>
   </article>
     `);
-    
+
     return $tweet;
-    
+
   }
 
-  const renderTweets = function(tweets) {
-    console.log("This is for tweets", tweets);
-    for(const item of tweets) {
-      console.log("This is for items", item);
+  const renderTweets = function (tweets) {
+    // console.log("This is for tweets", tweets);
+    for (const item of tweets) {
+      // console.log("This is for items", item);
       const $tweet = createTweetElement(item);
       $('#tweets-container').append($tweet);
 
     }
-    
+
     // loops through tweets
     // calls createTweetElement for each tweet
     // takes return value and appends it to the tweets container
   }
 
-  renderTweets(data);
+  // renderTweets(data);
 
-  
+  const loadTweets = function() {
+    $.get("/tweets/", function(data) {
+      console.log("THIS IS DATA", data);
+      renderTweets(data);
+    });
+
+  }
+  loadTweets();
+
   // console.log($tweet); 
-  
+
+
+  // const tweetSubmit = document.getElementsByClassName("tweet-footer");
+
+  $(".tweet-form").on("submit", function(event) {
+    event.preventDefault();
+    console.log("Hello from jQuery!");
+    const dataForm = $( this ).serialize() 
+    console.log(dataForm);
+
+    // const newTweet = document.getElementById("tweet-text");
+    $.ajax({
+      type: "POST",
+      url: "/tweets/",
+      data: dataForm,
+      success: () => {
+        loadTweets();
+      }
+    });
+
+
+  });
+
 });
+

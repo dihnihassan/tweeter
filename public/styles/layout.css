@@ -68,13 +68,12 @@ footer p {
 
 footer .fa-solid {
   color: #4056A1;
-
-
 }
 
 article.tweet {
   border: 2px solid black;
   padding: 10px;
+  margin: 20px;
 }
 
 article.tweet:hover {
