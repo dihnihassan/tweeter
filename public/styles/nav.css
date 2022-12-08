@@ -13,7 +13,13 @@ position: sticky;
 top: 0px;
 /* border: 2px solid green; */
 }
+@media only screen and (max-width: 1024px) {
+  nav {
+    background-color: rgb(135, 189, 243);
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+  }
 
+}
 /* div.fix {
   position: fixed;
   top: 0;
