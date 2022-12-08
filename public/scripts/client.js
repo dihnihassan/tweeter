@@ -79,6 +79,7 @@ $(document).ready(function () {
     if (dataForm.length === 5) {
       alert('Error: Tweet Area Cannot be empty');
     }
+
     if (dataForm.length > 145) {
       alert("Tweet Exceeds 140 Character Limit");
     } else {
@@ -88,9 +89,10 @@ $(document).ready(function () {
         data: dataForm,
         success: () => {
           loadTweets();
+          $("#tweet-text").val("");
         }
       });
-
+          
 
     }
 
