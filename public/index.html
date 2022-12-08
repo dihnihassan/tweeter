@@ -34,19 +34,24 @@
         <i class="fa-solid fa-angles-down"></i>
       </span>
     </nav>
-    <header>
+    <div class="joined-container"> 
+    <header class="main-header">
+    <div class="joined-main">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
-      <br>
-      <div>
-          <h2>Your Name</h2>
+      <!-- <br> -->
+      <div class="profile-name">
+          <h2>Dihni Hassan</h2>
       </div>
+    </div>
   </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
+        <div id="blank-error"></div>
+        <div id="count-error"></div>
         <form class="tweet-form" method="POST" action="/tweets/">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
@@ -59,5 +64,6 @@
       <section id="tweets-container">
       </section>
     </main>
+  </div>
   </body>
 </html>

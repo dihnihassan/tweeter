@@ -16,12 +16,13 @@ html {
 
 body {
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: #f5ede1;
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif; 
   /* display: flex;
   flex-direction: column;
   align-items: center; */
+  /* border: 3px solid black; */
 }
 
 .logo {
@@ -32,17 +33,23 @@ main {
   width: 90%;
   align-items: center;
   margin: 0 auto;
-  background-color: #f4f1ec;
+  background-color: #f5ede1;
   /* border: 2px solid red; */
 }
 
+.joined-container {
+  display: flex;
+  /* background-colorblue; */
+}
 
 article.tweet header {
   color: black;
-  background-color: #f4f1ec;
+  background-color: #f5ede1;
   display: flex; 
   flex-direction: row;
   justify-content: space-between;
+  
+  /* border: 3px solid darkred; */
 }
 
 #tweets-container {
@@ -83,6 +90,41 @@ article.tweet:hover {
 div i:hover {
   color: goldenrod;
 }
+
+#blank-error {
+  color: rgb(179, 3, 3);
+  font-style: italic;
+}
+
+#count-error {
+  color: rgb(179, 3, 3);
+  font-style: italic;
+}
+
+.profile-name {
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: italic;
+}
+/* body header main {
+  display: flex;
+  border: 3px solid darkgreen;
+  flex-direction: column;
+} */
+
+/* Desktop styles */
+@media only screen and (max-width: 1024px) {
+  .joined-container {
+    flex-direction: column;
+  }
+  .main-header {
+    background-color: rgb(135, 189, 243);
+  }
+
+
+
+}
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions

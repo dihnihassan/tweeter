@@ -16,7 +16,7 @@
 #tweet-text {
   border: none;
   border-bottom: 2px solid black;
-  background-color: #f4f1ec;
+  background-color: #f5ede1;
   min-width: 100%;
   max-width: 100%;
 }
@@ -53,4 +53,6 @@ label {
   font-family: "Source Sans Pro", sans-serif; 
   /* border: 2px solid red; */
 }
+
+
 

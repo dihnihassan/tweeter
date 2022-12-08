@@ -1,11 +1,27 @@
-body > header {
+.main-header {
   height: 400px;
   width: 100%;
-  background-color: orange;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* border: 3px solid darkgreen; */
+}
+
+.joined-main {
+  background-color: rgb(135, 189, 243);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  text-align: center;
+  /* border: 3px solid blue; */
+}
+
+.joined-main h2 {
+  text-align: center;
+  /* border: 3px solid purple; */
+  justify-content: center;
 }
 
 img {
@@ -17,5 +33,6 @@ img {
 h2 {
   display: flex;
   align-items: center;
+  /* border: 3px solid pink; */
 }
 
