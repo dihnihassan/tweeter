@@ -8,9 +8,16 @@
 
 
 $(document).ready(function () {
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const createTweetElement = function (tweetData) {
     // console.log("Inside createtweetelement", tweetData);
-
+    // const safeTweet = $("<p>").text(tweetData.content.text);
+    
     const $tweet = $(`
     <article class="tweet">
     <header>
@@ -20,7 +27,7 @@ $(document).ready(function () {
       </div>
       <p>${tweetData.user.handle}</p>
     </header>
-    <p>${tweetData.content.text}</p>
+    <p>${escape(tweetData.content.text)}</p>
   <hr/>
     <footer>
       <p>${timeago.format(tweetData.created_at)}</p>
@@ -58,7 +65,7 @@ $(document).ready(function () {
 
   const loadTweets = function() {
     $.get("/tweets/", function(data) {
-      console.log("THIS IS DATA", data);
+      // console.log("THIS IS DATA", data);
       renderTweets(data);
     });
 
@@ -72,7 +79,7 @@ $(document).ready(function () {
 
   $(".tweet-form").on("submit", function(event) {
     event.preventDefault();
-    console.log("Hello from jQuery!");
+    // console.log("Hello from jQuery!");
     const dataForm = $( this ).serialize() 
     console.log("This is dataform", dataForm);
 
@@ -83,6 +90,7 @@ $(document).ready(function () {
     if (dataForm.length > 145) {
       alert("Tweet Exceeds 140 Character Limit");
     } else {
+
       $.ajax({
         type: "POST",
         url: "/tweets/",
@@ -90,6 +98,7 @@ $(document).ready(function () {
         success: () => {
           loadTweets();
           $("#tweet-text").val("");
+          $(".counter").val("140");
         }
       });
           
