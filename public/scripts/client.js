@@ -84,11 +84,16 @@ $(document).ready(function () {
     console.log("This is dataform", dataForm);
 
     if (dataForm.length === 5) {
-      alert('Error: Tweet Area Cannot be empty');
+      $("#blank-error").text("Tweet Area Cannot be empty");
+      $("#blank-error").slideDown("slow");
+      $("#blank-error").delay(4000).slideUp("slow");
     }
 
     if (dataForm.length > 145) {
-      alert("Tweet Exceeds 140 Character Limit");
+      $("#count-error").text("Tweet Exceeds 140 Character Limit");
+      $("#count-error").slideDown("slow");
+      $("#count-error").delay(4000).slideUp("slow");
+      
     } else {
 
       $.ajax({
