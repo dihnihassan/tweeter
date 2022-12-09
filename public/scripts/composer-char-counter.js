@@ -1,4 +1,5 @@
 
+// Function to count number of tweet characters
 $(document).ready(function() {
   $("#tweet-text").on('input', function () {
     const countNumber = 140;
