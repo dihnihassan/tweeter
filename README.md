@@ -1,8 +1,16 @@
-# Tweeter Project
+# Dihni's Tweeter Project
 
 Tweeter is a simple, single-page Twitter clone.
 
 This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+
+
+!["Screenshot of Tweeter Desktop View"](https://github.com/dihnihassan/tweeter/blob/master/docs/tweeter-home-page.png?raw=true)
+!["Screenshot of Posted Tweets"](https://github.com/dihnihassan/tweeter/blob/master/docs/posted-tweets.png?raw=true)
+!["Screenshot of Tweeter Tablet View"](https://github.com/dihnihassan/tweeter/blob/master/docs/tweeter-tablet-view.png?raw=true)
+!["Screenshot of Posted Tweets in Tablet View"](https://github.com/dihnihassan/tweeter/blob/master/docs/postedTweets-tablet-view.png?raw=true)
+!["Screenshot of Empty Tweet Box Error"](https://github.com/dihnihassan/tweeter/blob/master/docs/empty-tweet-box-error.png?raw=true)
+!["Screenshot of Tweet Limit Exceeded Error"](https://github.com/dihnihassan/tweeter/blob/master/docs/tweet-limit-exceeded-error.png?raw=true)
 
 ## Getting Started
 
@@ -16,3 +24,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- Body-Parser
+- Chance 
+- md5
+- Nodemon
+
+
