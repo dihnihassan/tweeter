@@ -1,13 +1,11 @@
 .new-tweet {
   display: flex;
-  /* border: 2px solid fuchsia; */
   flex-direction: column;
   width: 100%;
 }
 
 .tweet-form {
   display: flex;
-  /* border: 2px solid green; */
   flex-direction: column;
   width: 100%;
 
@@ -23,7 +21,6 @@
 
 .tweet-footer {
   display: flex;
-  /* border: 2px solid red; */
   flex-direction: row;
   justify-content: space-between;
   margin-top: 0.5em;
@@ -51,7 +48,6 @@ button {
 
 label {
   font-family: "Source Sans Pro", sans-serif; 
-  /* border: 2px solid red; */
 }
 
 

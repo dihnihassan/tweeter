@@ -14,9 +14,8 @@ $(document).ready(function () {
     return div.innerHTML;
   };
 
+  // Function to create a single tweet
   const createTweetElement = function (tweetData) {
-    // console.log("Inside createtweetelement", tweetData);
-    // const safeTweet = $("<p>").text(tweetData.content.text);
     
     const $tweet = $(`
     <article class="tweet">
@@ -41,59 +40,49 @@ $(document).ready(function () {
     `);
 
     return $tweet;
-
   }
 
+
+  // Function to display list of tweets
   const renderTweets = function (tweets) {
-    // console.log("This is for tweets", tweets);
 
     $('#tweets-container').empty();
 
     for (const item of tweets) {
-      // console.log("This is for items", item);
       const $tweet = createTweetElement(item);
       $('#tweets-container').prepend($tweet);
 
     }
 
-    // loops through tweets
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
   }
 
-  // renderTweets(data);
 
+  // Function to get tweet data with GET request
   const loadTweets = function() {
     $.get("/tweets/", function(data) {
-      // console.log("THIS IS DATA", data);
       renderTweets(data);
     });
 
   }
   loadTweets();
 
-  // console.log($tweet); 
 
-
-  // const tweetSubmit = document.getElementsByClassName("tweet-footer");
-
+  // Tweet Submit Event
   $(".tweet-form").on("submit", function(event) {
     event.preventDefault();
-    // console.log("Hello from jQuery!");
     const dataForm = $( this ).serialize() 
-    console.log("This is dataform", dataForm);
 
     if (dataForm.length === 5) {
-      $("#blank-error").text("Tweet Area Cannot be empty");
+      $("#blank-error").text("Tweet cannot be empty");
       $("#blank-error").slideDown("slow");
       $("#blank-error").delay(4000).slideUp("slow");
     }
 
     if (dataForm.length > 145) {
-      $("#count-error").text("Tweet Exceeds 140 Character Limit");
+      $("#count-error").text("Tweet cannot exceed 140 character limit");
       $("#count-error").slideDown("slow");
       $("#count-error").delay(4000).slideUp("slow");
-      
+
     } else {
 
       $.ajax({
@@ -110,13 +99,8 @@ $(document).ready(function () {
 
     }
 
-    // const newTweet = document.getElementById("tweet-text");
-
 
   });
 
 });
 
-// if tweet count too long 
-// if tweet area empty
-  // do not submit form

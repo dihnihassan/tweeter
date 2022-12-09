@@ -11,7 +11,6 @@ padding-left: 1.5em;
 padding-right: 1.5em;
 position: sticky;
 top: 0px;
-/* border: 2px solid green; */
 }
 @media only screen and (max-width: 1024px) {
   nav {
@@ -20,14 +19,13 @@ top: 0px;
   }
 
 }
-/* div.fix {
-  position: fixed;
-  top: 0;
-  width: 100%;
-} */
 
 .right-nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.fa-bounce {
+  color: darkred;
 }

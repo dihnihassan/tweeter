@@ -19,10 +19,6 @@ body {
   background-color: #f5ede1;
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif; 
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
-  /* border: 3px solid black; */
 }
 
 .logo {
@@ -34,15 +30,11 @@ main {
   align-items: center;
   margin: 0 auto;
   background-color: #f5ede1;
-  /* border: 2px solid red; */
 }
 
 .joined-container {
   display: flex;
-  /* border: 3px solid black;  */
   padding: 20px;
-
-  /* background-colorblue; */
 }
 
 @media only screen and (max-width: 1024px) {
@@ -60,16 +52,10 @@ article.tweet header {
   display: flex; 
   flex-direction: row;
   justify-content: space-between;
-  
-  /* border: 3px solid darkred; */
 }
 
 #tweets-container {
-  /* border: 2px solid blue; */
   padding: 10px;
-  /* display: flex;
-  flex-direction: row;
-  justify-content: space-between; */
 }
 
 article.tweet footer {
@@ -118,11 +104,6 @@ div i:hover {
   font-family: "Source Sans Pro", sans-serif;
   font-style: italic;
 }
-/* body header main {
-  display: flex;
-  border: 3px solid darkgreen;
-  flex-direction: column;
-} */
 
 /* Desktop styles */
 @media only screen and (max-width: 1024px) {
@@ -130,11 +111,6 @@ div i:hover {
     flex-direction: column;
     padding: 0;
   }
-/* .joined-main {
-  padding: 0;
-  width: 70%;
-}
- */
 
 }
 

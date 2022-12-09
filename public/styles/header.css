@@ -6,7 +6,6 @@
   justify-content: center;
   align-items: center;
   margin: 30px;
-  border: 3px solid darkgreen;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -20,7 +19,6 @@
 
 .joined-main {
   background-color: rgb(135, 189, 243);
-  /* background-color: #83cbf2; */
   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
   display: flex;
   flex-direction: column;
@@ -28,12 +26,10 @@
   width: 80%;
   text-align: center;
   padding: 10px;
-  /* border: 3px solid blue; */
 }
 
 .joined-main h2 {
   text-align: center;
-  /* border: 3px solid purple; */
   justify-content: center;
 }
 
@@ -42,12 +38,10 @@
   justify-content: center;
   align-items: center;
   padding: 3px;
-  /* border: 3px solid green; */
 }
 
 h2 {
   display: flex;
   align-items: center;
-  /* border: 3px solid pink; */
 }
 
